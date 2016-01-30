@@ -2,18 +2,40 @@
   <head>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script>
-      var soundID = "Thunder";
+      var zero = "0";
+	  var jeden = "1";
+	  var dwa = "2";
+	  var trzy = "3";
+	  var cztery = "4";
+	  var piec = "5";
+	  var szesc = "6";
+	  var siedem = "7";
+	  var osiem = "8";
+	  var dziewiec = "9";
 
       function loadSound () {
-        createjs.Sound.registerSound("0.ogg", soundID);
+        createjs.Sound.registerSound("0.ogg", zero);
+		createjs.Sound.registerSound("1.ogg", jeden);
+		createjs.Sound.registerSound("2.ogg", dwa);
+		createjs.Sound.registerSound("3.ogg", trzy);
+		createjs.Sound.registerSound("4.ogg", cztery);
+		createjs.Sound.registerSound("5.ogg", piec);
+		createjs.Sound.registerSound("6.ogg", szesc);
+		createjs.Sound.registerSound("7.ogg", siedem);
+		createjs.Sound.registerSound("8.ogg", osiem);
+		createjs.Sound.registerSound("9.ogg", dziewiec);
       }
 
-      function playSound () {
-        createjs.Sound.play(soundID);
+      function playSound0 () {
+        createjs.Sound.play(zero);
+      }
+	  function playSound1 () {
+        createjs.Sound.play(jeden);
       }
     </script>
   </head>
   <body onload="loadSound();">
-    <button onclick="playSound();" class="playSound">Play Sound</button>
+    <button onclick="playSound0();" class="playSound">0</button>
+	<button onclick="playSound1();" class="playSound">1</button>
   </body>
 </html>
