@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script>
+      var soundID = "Thunder";
+      function loadSound (a) {
+        var string = a + ".ogg";
+        createjs.Sound.registerSound($var, a);
+      }
+      
+      function playSound (a) {
+        createjs.Sound.play(a);
+      }
+    </script>
+  </head>
+  <body onload="loadSound();">
+    <button onclick="playSound("0");" class="playSound">0</button>
+    <button onclick="playSound("1");" class="playSound">1</button>
+    <button onclick="playSound("2");" class="playSound">2</button>
+    <button onclick="playSound("3");" class="playSound">3</button>
+    <button onclick="playSound("4");" class="playSound">4</button>
+    <button onclick="playSound("5");" class="playSound">5</button>
+    <button onclick="playSound("6");" class="playSound">6</button>
+    <button onclick="playSound("7");" class="playSound">7</button>
+    <button onclick="playSound("8");" class="playSound">8</button>
+    <button onclick="playSound("9");" class="playSound">9</button>
+  </body>
+</html>
