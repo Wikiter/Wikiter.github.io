@@ -60,12 +60,17 @@
 	  function playSound9 () {
         createjs.Sound.play(dziewiec);
       }
-	  function playSoundPI () {
-		for(i=0;i<100;i++) 
+	  function xd(a)
+	  {
+		if(a<100)
 		{
-			document.getElementById("pi").innerHTML = pi[i];
-			setTimeout(function(){alert("hi")}, 1000);
+			document.getElementById("pi").innerHTML = pi[a];
+			window.setInterval(xd(a+1), 1000);
 		}
+	  }
+	  function playSoundPI () {
+		var i=0;
+		xd(i);
 	  }
     </script>
   </head>
