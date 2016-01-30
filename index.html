@@ -60,12 +60,25 @@
 	  function playSound9 () {
         createjs.Sound.play(dziewiec);
       }
+	  var tekst="";
 	  function xd(a)
 	  {
 		if(a<100)
 		{
-			document.getElementById("pi").innerHTML = a;
-			window.setTimeout(xd(a+1), 1000);
+			tekst = tekst + pi[a];
+			if(a==0) tekst = tekst + ".";
+			document.getElementById("pi").innerHTML = tekst;
+			if(pi[a]==0) playSound0();
+			if(pi[a]==1) playSound1();
+			if(pi[a]==2) playSound2();
+			if(pi[a]==3) playSound3();
+			if(pi[a]==4) playSound4();
+			if(pi[a]==5) playSound5();
+			if(pi[a]==6) playSound6();
+			if(pi[a]==7) playSound7();
+			if(pi[a]==8) playSound8();
+			if(pi[a]==9) playSound9();
+			window.setTimeout(xd, 1000,a+1);
 		}
 	  }
 	  function playSoundPI () {
