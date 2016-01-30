@@ -58,7 +58,7 @@
         createjs.Sound.play(dziewiec);
       }
 	  function playSoundPI () {
-		document.write(5+6);
+		document.getElementById("pi").innerHTML = 5 + 6;
 	  }
     </script>
   </head>
@@ -73,7 +73,8 @@
 	<button onclick="playSound7();" class="playSound">7</button>
 	<button onclick="playSound8();" class="playSound">8</button>
 	<button onclick="playSound9();" class="playSound">9</button>
-	<br />
+	<br /><br />
 	<button onclick="playSoundPI();" class="playSound">PI</button>
+	<p id="pi"> </p>
   </body></center>
 </html>
