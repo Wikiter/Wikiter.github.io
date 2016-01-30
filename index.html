@@ -13,7 +13,7 @@
 	  var siedem = "7";
 	  var osiem = "8";
 	  var dziewiec = "9";
-
+	  var pi = "31415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
       function loadSound () {
         createjs.Sound.registerSound("0.ogg", zero);
 		createjs.Sound.registerSound("1.ogg", jeden);
@@ -26,7 +26,10 @@
 		createjs.Sound.registerSound("8.ogg", osiem);
 		createjs.Sound.registerSound("9.ogg", dziewiec);
       }
-
+	  function sleepFor( sleepDuration ){
+		var now = new Date().getTime();
+		while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+	  }
       function playSound0 () {
         createjs.Sound.play(zero);
       }
@@ -58,7 +61,11 @@
         createjs.Sound.play(dziewiec);
       }
 	  function playSoundPI () {
-		document.getElementById("pi").innerHTML = 5 + 6;
+		for(i=0;i<100;i++) 
+		{
+			document.getElementById("pi").innerHTML = pi[i];
+			sleepFor(1020);
+		}
 	  }
     </script>
   </head>
